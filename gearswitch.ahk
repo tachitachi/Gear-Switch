@@ -232,14 +232,6 @@ $Backspace::
 $Enter::
 {
 	Send {Enter}
-
-	if cheats = 1
-	{
-		cheats = 0
-		chat = 1
-		SetTimer, chatReset, %chatTimeout%
-		return
-	}	
 	
 	if chat = 1
 	{
@@ -313,6 +305,7 @@ SpecialAction:
 		if (cheats = 1 or v = 1) and (r = 1)
 			getKey(tempkey,numHotkeys)
 			
+        sleep 15
 			
 	}
 	else
